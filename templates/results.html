@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <div id="results">
+        {% for result in results %}
+            <div class="result">
+                <img src="{{ result.file_name }}" alt="Search result" style="width: 200px;">
+                <p>Similarity: {{ result.similarity }}</p>
+            </div>
+        {% endfor %}    
+    </div>
+</body>
+</html>
+
+
